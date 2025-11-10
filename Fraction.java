@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class Fraction implements FractionInterface {
     private int numerator;
     private int denominator;
@@ -62,5 +64,10 @@ public class Fraction implements FractionInterface {
         // Приведение типа и сравнение числителей и знаменателей
         Fraction fraction = (Fraction) obj;
         return numerator == fraction.numerator && denominator == fraction.denominator;
+    }
+
+    @Override
+    public int hashCode() { //Метод чтобы сравинить объекты по значению, а не по ссылкам
+        return Objects.hash(numerator, denominator);
     }
 }
