@@ -1,6 +1,19 @@
+package ru.Romanov.Main;
+
+import ru.Romanov.task1.Fraction;
+import ru.Romanov.task2.Cat;
+import ru.Romanov.task2.Funs;
+import ru.Romanov.task2.Meowable;
+import ru.Romanov.task3.ListTasks;
+import ru.Romanov.task4.Store;
+import ru.Romanov.task4.StoreAnalyzer;
+import ru.Romanov.task5.TextAnalyzer;
+import ru.Romanov.task6.QueueUtils;
+import ru.Romanov.task7.Point;
+import ru.Romanov.task7.Polyline;
+import ru.Romanov.task8.FileProcessor;
+
 import java.util.*;
-import java.nio.file.*;
-import java.io.*;
 import java.util.Scanner;
 
 public class Main {
@@ -29,8 +42,8 @@ public class Main {
                                 fraction1.getRealValue());
                         System.out.println("Дробь 2: " + fraction2 + " = " +
                                 fraction2.getRealValue());
-                        System.out.println("кэш дроби 1: " + fraction1.getRealValue());
-                        System.out.println("кэш дроби 2: " + fraction2.getRealValue());
+                        System.out.println("кэш дроби 1: " + fraction1.hashCode());
+                        System.out.println("кэш дроби 2: " + fraction2.hashCode());
                         System.out.println("Дробь 1 = Дробь 2: " + fraction1.equals(fraction2));
                     } catch (IllegalArgumentException e) {
                         System.out.println("Ошибка: " + e.getMessage());
