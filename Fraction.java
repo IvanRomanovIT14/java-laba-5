@@ -1,4 +1,4 @@
-import java.util.Objects;
+package ru.Romanov.task1;
 
 public class Fraction implements FractionInterface {
     private int numerator;
@@ -64,10 +64,5 @@ public class Fraction implements FractionInterface {
         // Приведение типа и сравнение числителей и знаменателей
         Fraction fraction = (Fraction) obj;
         return numerator == fraction.numerator && denominator == fraction.denominator;
-    }
-
-    @Override
-    public int hashCode() { //Метод чтобы сравинить объекты по значению, а не по ссылкам
-        return Objects.hash(numerator, denominator);
     }
 }
