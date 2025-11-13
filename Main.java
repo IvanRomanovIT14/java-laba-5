@@ -1,19 +1,3 @@
-package ru.Romanov.Main;
-
-import ru.Romanov.task1.Fraction;
-import ru.Romanov.task1.FractionCache;
-import ru.Romanov.task2.Cat;
-import ru.Romanov.task2.Funs;
-import ru.Romanov.task2.Meowable;
-import ru.Romanov.task3.ListTasks;
-import ru.Romanov.task4.Store;
-import ru.Romanov.task4.StoreAnalyzer;
-import ru.Romanov.task5.TextAnalyzer;
-import ru.Romanov.task6.QueueUtils;
-import ru.Romanov.task7.Point;
-import ru.Romanov.task7.Polyline;
-import ru.Romanov.task8.FileProcessor;
-
 import java.util.*;
 import java.util.Scanner;
 
