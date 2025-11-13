@@ -1,5 +1,3 @@
-package ru.Romanov.task1;
-
 public class FractionCache {
     private Double numeratorCache;
     private Double denominatorCache;
@@ -35,4 +33,5 @@ public class FractionCache {
     public void setRealValueCache(Double value) {
         this.realValueCache = value;
     }
+
 }
