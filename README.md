@@ -22,14 +22,12 @@
 **Свойства:**
 - `numerator` (private int) - числитель дроби
 - `denominator` (private int) - знаменатель дроби  
-- `cachedRealValue` (private Double) - кэшированное вещественное значение
 
-**Конструкторы:**
-- `Fraction()` - создает дробь 0/1
+**Конструктор:**
 - `Fraction(int numerator, int denominator)` - создает дробь с заданными значениями
 
 **Методы:**
-- `getRealValue()` - возвращает вещественное значение (с кэшированием)
+- `getRealValue()` - возвращает вещественное значение дроби
 - `setNumerator(int numerator)` - устанавливает числитель
 - `setDenominator(int denominator)` - устанавливает знаменатель с проверкой
 - `equals()` - сравнивает дроби по числителю и знаменателю
