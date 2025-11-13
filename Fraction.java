@@ -1,14 +1,6 @@
-package ru.Romanov.task1;
-
 public class Fraction implements FractionInterface {
     private int numerator;
     private int denominator;
-    private Double cachedRealValue;
-
-    public Fraction() { // Конструктор по умолчанию - создает дробь 0/1
-        this.numerator = 0;
-        this.denominator = 1;
-    }
 
     // Конструктор с параметрами - создает дробь с заданными числителем и знаменателем
     public Fraction(int numerator, int denominator) {
@@ -17,17 +9,8 @@ public class Fraction implements FractionInterface {
     }
 
     @Override
-    public double getRealValue() { // Геттер для вещественного значения дроби
-        if (cachedRealValue == null) { // Если кеша нет, вычисляет и сохраняет его в кеш
-            cachedRealValue = (double) numerator / denominator;
-        }
-        return cachedRealValue;
-    }
-
-    @Override
     public void setNumerator(int numerator) { // Сеттер числителя
         this.numerator = numerator;
-        this.cachedRealValue = null;
     }
 
     @Override
@@ -39,7 +22,11 @@ public class Fraction implements FractionInterface {
             throw new IllegalArgumentException("Знаменатель не может быть отрицательным!");
         }
         this.denominator = denominator;
-        this.cachedRealValue = null;
+    }
+
+    @Override
+    public double getRealValue() { // Геттер для получения вещественного значения дроби
+        return (double) numerator / denominator;
     }
 
     public int getNumerator() { // Геттер числителя
