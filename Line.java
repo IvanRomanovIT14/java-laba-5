@@ -1,3 +1,5 @@
+package ru.Romanov.task7;
+
 import java.util.Objects;
 
 public class Line {
@@ -53,7 +55,7 @@ public class Line {
     }
 
     @Override
-    public int hashCode() { // Метод чтобы не было одинаковых линий в ломанной линии
+    public int hashCode() { // Метод генерирует хэш-код линии
         return Objects.hash(start, end);
     }
 }
