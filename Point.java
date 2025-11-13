@@ -1,3 +1,5 @@
+package ru.Romanov.task7;
+
 import java.util.Scanner;
 import java.util.Objects;
 
@@ -60,7 +62,7 @@ public class Point {
     }
 
     @Override
-    public int hashCode() { // Метод чтобы не было одинаковых точек в ломанной линии
+    public int hashCode() { // Метод генерирует хэш-код точки
         return Objects.hash(x, y);
     }
 }
