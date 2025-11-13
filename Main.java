@@ -1,6 +1,7 @@
 package ru.Romanov.Main;
 
 import ru.Romanov.task1.Fraction;
+import ru.Romanov.task1.FractionCache;
 import ru.Romanov.task2.Cat;
 import ru.Romanov.task2.Funs;
 import ru.Romanov.task2.Meowable;
@@ -32,18 +33,22 @@ public class Main {
                         System.out.print("Знаменатель: ");
                         int den1 = Valid.getInt();
                         Fraction fraction1 = new Fraction(num1, den1);
+                        FractionCache cache1 = new FractionCache();
                         System.out.println("Введите вторую дробь:");
                         System.out.print("Числитель: ");
                         int num2 = Valid.getInt();
                         System.out.print("Знаменатель: ");
                         int den2 = Valid.getInt();
                         Fraction fraction2 = new Fraction(num2, den2);
-                        System.out.println("Дробь 1: " + fraction1 + " = " +
-                                fraction1.getRealValue());
-                        System.out.println("Дробь 2: " + fraction2 + " = " +
-                                fraction2.getRealValue());
-                        System.out.println("кэш дроби 1: " + fraction1.hashCode());
-                        System.out.println("кэш дроби 2: " + fraction2.hashCode());
+                        FractionCache cache2 = new FractionCache();
+                        cache1.setNumeratorCache((double)fraction1.getNumerator());
+                        cache1.setDenominatorCache((double)fraction1.getDenominator());
+                        cache1.setRealValueCache(fraction1.getRealValue());
+                        cache2.setNumeratorCache((double)fraction2.getNumerator());
+                        cache2.setDenominatorCache((double)fraction2.getDenominator());
+                        cache2.setRealValueCache(fraction2.getRealValue());
+                        System.out.println("Дробь 1: " + fraction1 + " = " + cache1.getRealValueCache());
+                        System.out.println("Дробь 2: " + fraction2 + " = " + cache2.getRealValueCache());
                         System.out.println("Дробь 1 = Дробь 2: " + fraction1.equals(fraction2));
                     } catch (IllegalArgumentException e) {
                         System.out.println("Ошибка: " + e.getMessage());
